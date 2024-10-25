@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:nubanco/pages/menupages/PagarScreem.dart';
-import 'package:nubanco/pages/menupages/TransferirScreen.dart';
-import 'package:nubanco/pages/menupages/areapix.dart';
-import 'package:nubanco/pages/menupages/caixinhasScreen.dart';
-import 'package:nubanco/pages/menupages/depositar.dart';
-import 'package:nubanco/pages/menupages/investirScreen.dart';
+import 'package:nubanco/components/semCartao/semCartao.dart';
+
+
+
 import 'package:nubanco/pages/menupages/pegarEmprestado.dart';
-import 'package:nubanco/pages/menupages/recargaCelular.dart';
+
 import 'package:nubanco/utils/colors_standard.dart';
 
 class MenuItens extends StatelessWidget {
@@ -17,25 +15,25 @@ class MenuItens extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 12),
-      padding: const EdgeInsets.only(left: 20, right: 20),
+      padding: const EdgeInsets.only(left: 15, right: 15),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Wrap(
           direction: Axis.horizontal,
           children: [
-            _itemMenu(icon: MdiIcons.clover, name: 'Área Pix', context: context, destination: AreaPix()),
-            _itemMenu(icon: MdiIcons.barcode, name: 'Pagar', context: context, destination: PagarScreen()),
+            _itemMenu(icon: MdiIcons.clover, name: 'Área Pix', context: context, destination: SemCartao()),
+            _itemMenu(icon: MdiIcons.barcode, name: 'Pagar', context: context, destination: SemCartao()),
             _itemMenu(
                 icon: MdiIcons.handHeartOutline,
                 name: 'Pegar\nEmprestado',
                 extraText: 'R\$13.000',
                 context: context,
                 destination: PegarEmprestado()), // Exemplo com texto extra
-            _itemMenu(icon: MdiIcons.cash, name: 'Transferir', context: context, destination: TransferirScreen()),
-            _itemMenu(icon: MdiIcons.battery10, name: 'Recarga de\n celular', context: context, destination: RecargaCelularScreen()),
-            _itemMenu(icon: MdiIcons.cash, name: 'Depositar', context: context, destination: DepositarScreen()),
-            _itemMenu(icon: MdiIcons.creditCard, name: 'Caixinhas', context: context, destination: CaixinhasScreen()),
-            _itemMenu(icon: MdiIcons.chartBar, name: 'Investir', context: context, destination: InvestirScreen()),
+            _itemMenu(icon: MdiIcons.cash, name: 'Transferir', context: context, destination: SemCartao()),
+            _itemMenu(icon: MdiIcons.battery10, name: 'Recarga de\n celular', context: context, destination: SemCartao()),
+            _itemMenu(icon: MdiIcons.cash, name: 'Depositar', context: context, destination: SemCartao()),
+            _itemMenu(icon: MdiIcons.creditCard, name: 'Caixinhas', context: context, destination: SemCartao()),
+            _itemMenu(icon: MdiIcons.chartBar, name: 'Investir', context: context, destination: SemCartao()),
           ],
         ),
       ),

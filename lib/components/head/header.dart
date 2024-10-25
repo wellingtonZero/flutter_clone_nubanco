@@ -3,6 +3,7 @@ import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:nubanco/components/controllers/controller_home.dart';
 import 'package:nubanco/utils/colors_standard.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Header extends StatefulWidget {
   const Header({super.key});
@@ -12,6 +13,14 @@ class Header extends StatefulWidget {
 }
 
 class _HeaderState extends State<Header> {
+  Future<void> _launchURL() async {
+    final Uri url = Uri.parse('https://nubank.com.br/contato/');
+
+    if (!await launchUrl(url)) {
+      throw 'Não foi possível abrir a URL: $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -67,15 +76,11 @@ class _HeaderState extends State<Header> {
               );
             }),
         IconButton(
-            onPressed: () {},
+            onPressed: () {
+              _launchURL();
+            },
             icon: const Icon(
               MdiIcons.helpCircleOutline,
-              color: Colors.white,
-            )),
-        IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.person_add_alt_1_outlined,
               color: Colors.white,
             )),
       ],

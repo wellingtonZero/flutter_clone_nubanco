@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:nubanco/components/semCartao/semCartao.dart';
 import 'package:nubanco/utils/colors_standard.dart';
 
-class Cartao extends StatelessWidget {
+class Cartao extends StatefulWidget {
   const Cartao({super.key});
 
+  @override
+  State<Cartao> createState() => _CartaoState();
+}
+
+class _CartaoState extends State<Cartao> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,18 +35,33 @@ class Cartao extends StatelessWidget {
   }
 
   _textCartao() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(bottom: 8.0),
-          child: Text(
-            'Cartão de crédito',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+    return GestureDetector(
+      onTap:(){
+        Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SemCartao()),
+                  );
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Text(
+              'Cartão de crédito',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
           ),
-        ),
-        Icon(MdiIcons.chevronRight),
-      ],
+          GestureDetector(
+            onTap: (){
+              Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SemCartao()),
+                  );
+            },
+            child: Icon(MdiIcons.chevronRight)),
+        ],
+      ),
     );
   }
 
@@ -55,6 +76,7 @@ class Cartao extends StatelessWidget {
       ],
     );
   }
+
    _limite() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -65,7 +87,7 @@ class Cartao extends StatelessWidget {
           child: Text('Limite Disponível',
           style: TextStyle(color: backgroundColor),),
         ),
-        Text('R\$ 822,00 ',
+        Text('R\$ 900,00 ',
         style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
       ],
     );

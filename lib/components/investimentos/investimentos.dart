@@ -31,7 +31,6 @@ class Investimentos extends StatelessWidget {
           'Investimentos',
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
-        Icon(MdiIcons.chevronRight),
       ],
     );
   }
@@ -71,7 +70,6 @@ class Investimentos extends StatelessWidget {
           'Shopping',
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
-        Icon(MdiIcons.chevronRight),
       ],
     );
   }

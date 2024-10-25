@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubanco/pages/home_page.dart';
+import 'package:nubanco/pages/inicial_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Nubank',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: HomePage(),
+      home: Inicial(),
     );
   }
 }
