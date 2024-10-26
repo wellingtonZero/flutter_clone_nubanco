@@ -7,3 +7,6 @@
 # Referências do projeto
 <p>youtube: https://www.youtube.com/@DevOutlier</p>
 
+# youtube video
+<p>https://youtu.be/F2Mj9rwdktI?si=VmTu-UYoFwBd9t3N</p>
+
