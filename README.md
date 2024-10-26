@@ -5,7 +5,7 @@
 [assistir](https://github.com/user-attachments/assets/3e95a1f9-d246-426e-b38b-28a834123b8e)
 
 # Referências do projeto
-<p>youtube: https://www.youtube.com/@DevOutlier</p>
+<p>https://www.youtube.com/@DevOutlier</p>
 
 # youtube video
 <p>https://youtu.be/F2Mj9rwdktI?si=VmTu-UYoFwBd9t3N</p>
